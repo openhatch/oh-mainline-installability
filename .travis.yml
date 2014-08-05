@@ -23,7 +23,7 @@ script:
  - echo 'import django.test.client ; c = django.test.client.Client() ; c.get('/')' | python manage.py shell
 # Get development headers for PIL
 before_install:
- - if [ -z "$USE_MYSQL" ] ; then deactivate ; else pip install MySQLdb ; fi
+ - if [ -z "$USE_MYSQL" ] ; then deactivate ; else pip install MySQL-python ; fi
  - sudo apt-get update -qq
  - sudo apt-get build-dep -qq python-imaging python-mysqldb
  - sudo apt-get install libjpeg-dev python-mysqldb

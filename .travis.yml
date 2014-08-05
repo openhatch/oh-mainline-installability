@@ -32,3 +32,10 @@ before_install:
 
 before_script:
   - mysql -e 'create database oh_milestone_a'
+
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#openhatch"
+    on_success: [change] # default: always
+    on_failure: [change] # default: always

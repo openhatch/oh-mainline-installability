@@ -1,6 +1,8 @@
 oh-mainline-installability
 ==========================
 
+[![Status](https://travis-ci.org/openhatch/oh-mainline-installability.svg?branch=master)](https://travis-ci.org/openhatch/oh-mainline-installability)
+
 This repo exists merely to trigger travis-ci to test if oh-mainline's latest code commits have broken our install instructions.
 
 The install instructions officially live here:

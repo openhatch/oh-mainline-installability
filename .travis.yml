@@ -14,6 +14,11 @@ install:
  - sudo cp /usr/lib/*/libz.so $VIRTUAL_ENV/lib
 # command to run tests
 script:
+ - git clone https://github.com/openhatch/oh-mainline.git
+ - cd oh-mainline
+ - echo "Most recent commit:"
+ - git show | cat
+ - echo "OK. Let's see if it works."
  - python manage.py syncdb --migrate --noinput
  - echo 'import django.test.client ; c = django.test.client.Client() ; c.get('/')' | python manage.py shell
 # Get development headers for PIL
